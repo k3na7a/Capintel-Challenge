@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+  --font-headers: 'Libre Baskerville', serif;
+  --font-content: "Montserra", sans-serif;
+}

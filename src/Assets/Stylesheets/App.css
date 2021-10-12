@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: var(--background);
+}
+
+.Ticker {
+  min-width: 360px;
+  min-height: 100vh;
+  background-color: var(--background);
+  border-left: solid var(--border) 1px;
+  border-right: solid var(--border) 1px;
+}
+
+.text-white {
+  color: white;
+}
+.text-accent {
+  color: var(--accent);
+}
+.text-header {
+  font-family: var(--font-headers);
+}
+.text-content {
+  font-family: var(--font-content);
+}
