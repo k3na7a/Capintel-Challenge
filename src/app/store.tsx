@@ -1,4 +1,4 @@
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import tickerReducer, { fetchTickerData } from '../features/ticker/tickerSlice';
 
 export default configureStore({  
@@ -6,10 +6,14 @@ export default configureStore({
         ticker: tickerReducer
     },
     middleware: (getDefaultMiddleware) => 
-        getDefaultMiddleware({ 
-            thunk: { 
-                extraArgument: fetchTickerData
-            }, 
-            serializableCheck: false 
-        })
+        getDefaultMiddleware(
+            { 
+                thunk: { 
+                    extraArgument: [
+                        fetchTickerData
+                    ] 
+                }, 
+                serializableCheck: false 
+            }
+        )
 })

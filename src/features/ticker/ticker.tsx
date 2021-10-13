@@ -21,10 +21,10 @@ const Ticker = (props: any) => {
         const TIMESTAMP : number = day.getTime()
         props.ChangeDate(TIMESTAMP)
     }
-    switch(props.ticker.status){
+    switch(props.ticker.status) {
         case `${STRINGS.EN.STS.SCC}`:
             let ReactUI: JSX.Element;
-            try{
+            try {
                 let rolloffdaysPre      = Array(VALUES.ROLLOFF)
                 let rolloffdaysPost     = Array(VALUES.ROLLOFF)
                 const STARTDAY          = props.ticker.data.performance.at(-2)[0]
@@ -63,7 +63,9 @@ const Ticker = (props: any) => {
                                     </span>
                                 </p>
                                 <p className="text-muted fw-bold">
-                                    <span>{`${props.ticker.data.ticker}:${props.ticker.data.exchange}`}</span>
+                                    <span>
+                                        {`${props.ticker.data.ticker}:${props.ticker.data.exchange}`}
+                                    </span>
                                 </p>
                             </div>
                             <div className="d-flex justify-content-around text-white fw-bold text-content">
@@ -180,7 +182,7 @@ const Ticker = (props: any) => {
                             </div>                                     
                         </div>
                     </React.Fragment>
-            }catch{
+            } catch {
                 ReactUI =   
                     <React.Fragment>
                         <div className="py-3 px-5 d-flex flex-column Ticker mx-auto w-75 align-items-center">

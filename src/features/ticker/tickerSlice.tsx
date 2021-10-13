@@ -23,13 +23,13 @@ export const tickerSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchTickerData.fulfilled, (state, action) => {
-            try{
+            try {
                 const DATA          = action.payload
                 state.data          = DATA
                 state.selectedDay   = (!state.selectedDay) ? DATA.performance.at(-VALUES.APPROX_3YRS_DATA)[0] : state.selectedDay
                 state.value         = DATA.ticker
                 state.status        = `${STRINGS.EN.STS.SCC}`
-            }catch{
+            } catch {
                 state.status        = `${STRINGS.EN.STS.ERR}`
             }
         })
